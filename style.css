@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Roboto Slab', serif;
+}
+
+:root {
+    --primary-color: #8ebde9;
+    --secondary-color: #a46232;
+    --light-color: #fff;
+    --dark-color: #000;
+    --lightdark-color: #222;
+    --lighterdark-color: #333;
+
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+/*--- SCROLLBAR ---*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--lighterdark-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1b1b1b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-color);
+}
+
+/*--- SCROLLBAR ---*/
+body {
+    overflow-x: hidden;
+    background-color: var(--primary-color);
+}
+
+/* ---HEADER---*/
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+    max-width: 100%;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    width: 150px !important;
+    height: 50px;
+    filter: drop-shadow(0px 3px 4px #333)
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 0px;
+}
+
+header ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 5px;
+    margin: 10px;
+    color: white;
+    font-size: 1.8rem;
+    transition: all .5s ease-in-out;
+    text-shadow: 5px 5px 5px #333;
+    z-index: 100;
+}
+header ul li a::before,
+header ul li a::after {
+    width: 145px;
+    height: 3px;
+    margin-left: 10px;
+    display: block;
+    content: "";
+    position: absolute;
+    background-color: white;
+    transition: all .5s ease-in-out;
+}
+header ul li a::before {
+    transform: translateY(-5px);
+}
+header ul li a::after {
+    transform: translateY(3px);
+}
+
+
+
+
+
+
+header ul li a:hover,
+header ul li a.active {
+    background: #ffffff62;
+    border-radius: 5px;
+    color: #ffffff;
+    text-shadow: 5px 5px 5px #333;
+}
+
+/* ---HEADER---*/
+
+/* ---MAIN SECTION---*/
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    /* background: linear-gradient(to top, var(--primary-color), transparent); */
+    z-index: 1;
+}
+
+.main img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+
+}
+
+
+/* ---MAIN SECTION---*/
